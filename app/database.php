@@ -3,6 +3,11 @@
 /* database connection stuff here
  * 
  */
+ 
+  $DB_HOST = "locahost";
+ $DB_DATABASE = "cosc";
+ $DB_USER = "root";
+ $DB_PASS= "";
 
 function db_connect() {
     try {

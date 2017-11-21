@@ -1,24 +1,48 @@
 <?php require_once '../app/views/templates/headerPublic.php' ?>
-<h1> Salman Hassan </h1>
-<h2>This is Assignment 1</h2>
+<div class="container">
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Please create an account</h1>
+                <p class="lead"> <?= date("F jS, Y"); ?></p>
+				<?php 
+				if(isset($_SESSION['message']))
+				{
+				echo $_SESSION['message'];
+				unset($_SESSION['message']);
+				}
+				
+				?>
+				
+            </div>
+        </div>
+    </div>
 
-    <head>
-	
-        <title> Registration </title>
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="form-horizontal" action="/login/register" method="post">
+			    <fieldset>
+					<div class="form-group">
+					  <label for="username" class="col-lg-2 control-label">New Username</label>
+					  <div class="col-lg-10">
+						<input type="text" class="form-control" name="username" placeholder="Username">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label for="password" class="col-lg-2 control-label">New Password</label>
+					  <div class="col-lg-10">
+						<input type="password" class="form-control" name="password" placeholder="Password">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <div class="col-lg-10 col-lg-offset-2">
+						<button type="submit" class="btn btn-primary">Submit</button>
+					  </div>
+					</div>
+			    </fieldset>
+			</form>
+			<a href="/home/login"> Sign In here </a>
+        </div>
+    </div>
 
-    </head>
-
-    <body>
-	 <p> <form action="/login/register" method="POST"><br> </p>
-	 	 <p> Email: <input type="text" name="email"/></br> </p>
-		 <p> Username: <input type="username" name="username"/></br> </p>
-		 <p> Password: <input type="password" name="password"/></br></br> </p>
-        </form>
-		 <p> <form method="post" action="../app/view/login.php"> <br> </p>
-		 <p> <input type="submit" name= "register" value="Registr"/> </p>
-		</form>
-        </form>
-    </body>
-</html>
-     
-    <?php require_once '../app/views/templates/footer.php' ?>
+    <?php require_once '../app/views/templates/footerPublic.php' ?>

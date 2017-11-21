@@ -1,27 +1,49 @@
 <?php require_once '../app/views/templates/headerPublic.php' ?>
+<div class="container">
+    <div class="page-header" id="banner">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>You are not logged in! haha</h1>
+                <p class="lead"> <?= date("F jS, Y"); ?></p>
+				<?php 
+				//echo $_SESSION['attempts'];
+			//	echo  $_COOKIE['attempts'];
+				if(isset($_COOKIE['attempts'])) 
+				{
+					echo "Too Many Attempts! pleaes try after 60 seconds.";
+				}
+				//else
+					//echo "cookies is not set";
+			?>
+            </div>
+        </div>
+    </div>
 
-<h1> Salman Hassan </h1>
-<h2>This is Assignment 1</h2>
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="form-horizontal" action="/login/index" method="post">
+			    <fieldset>
+					<div class="form-group">
+					  <label for="username" class="col-lg-2 control-label">Username</label>
+					  <div class="col-lg-10">
+						<input type="text" class="form-control" name="username" placeholder="Username">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <label for="password" class="col-lg-2 control-label">Password</label>
+					  <div class="col-lg-10">
+						<input type="password" class="form-control" name="password" placeholder="Password">
+					  </div>
+					</div>
+					<div class="form-group">
+					  <div class="col-lg-10 col-lg-offset-2">
+						<button type="submit" class="btn btn-primary">Submit</button>
+					  </div>
+					</div>
+			    </fieldset>
+			</form>
+			<a href="/login/register"> Sign up here </a>
+        </div>
+    </div>
 
-    <head>
-	
-        <title> Login </title>
-
-    </head>
-
-    <body>
-
-	 <p> <form action="login/index" method="POST"><br> </p>
-	 <p> Username: <input type="text" name="username"/></br> </p>
-	 <p> Password: <input type="password" name="password"/></br></br> </p>
-	 <p> <input type="submit" name ="login" value="Log in"/> </p>
-	 <p> <input type="submit" name = "Attempts" value="number of attempts"/> </p>
-	
-        </form>
-		 <p> <form method="post" action="/login/register"> <br> </p>
-		 <p> <input type="submit" value="Registr Here"/> </p>
-		</form>
-		
-    </body>
-</html>
-    <?php require_once '../app/views/templates/footer.php' ?>
+    <?php require_once '../app/views/templates/footerPublic.php' ?>
