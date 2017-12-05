@@ -1,4 +1,4 @@
-<?php require_once '../app/views/templates/header.php' ?>
+<?php require_once '../templates/header.php' ?>
 
 <div class="container">
     <div class="page-header" id="banner">
@@ -13,7 +13,7 @@
 	
 	<?php 
 	
-	require_once '../app/controllers/crud.php';
+	require_once '../../controllers/crud.php';
 	$_index = new crud();
 	$result = $_index -> mylogs();
 	echo "<table class='table'>";
@@ -37,4 +37,4 @@
     echo "</table>";
     ?>
 
-    <?php require_once '../app/views/templates/footer.php' ?>
+    <?php require_once '../templates/footer.php' ?>

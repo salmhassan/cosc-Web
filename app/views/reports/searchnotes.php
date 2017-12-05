@@ -1,4 +1,4 @@
-<?php require_once '../app/views/templates/header.php' ?>
+<?php require_once '../templates/header.php' ?>
 </br></br></br>
 <div class="container">
 <a href="/reports/students">Back</a>
@@ -12,7 +12,7 @@
 	
 <?php
 
-	require_once '../app/controllers/reports.php';
+	require_once '../../controllers/reports.php';
 	$_index = new Reports(); 
 $result = $_index->getCertainNotes($_POST['from'],$_POST['to']);
 	echo "<table class='table'>";
@@ -40,4 +40,4 @@ $result = $_index->getCertainNotes($_POST['from'],$_POST['to']);
 	
     ?>
 
-    <?php require_once '../app/views/templates/footer.php' ?>
+    <?php require_once '../templates/footer.php' ?>

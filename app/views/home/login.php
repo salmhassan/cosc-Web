@@ -1,4 +1,4 @@
-<?php require_once '../app/views/templates/headerPublic.php' ?>
+<?php require_once '../templates/headerPublic.php' ?>
 <div class="container">
     <div class="page-header" id="banner">
         <div class="row">
@@ -21,7 +21,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <form class="form-horizontal" action="/login/index" method="post">
+            <form class="form-horizontal" action="index.php" method="post">
 			    <fieldset>
 					<div class="form-group">
 					  <label for="username" class="col-lg-2 control-label">Username</label>
@@ -42,8 +42,8 @@
 					</div>
 			    </fieldset>
 			</form>
-			<a href="/login/register"> Sign up here </a>
+			<a href="register.php"> Sign up here </a>
         </div>
     </div>
 
-    <?php require_once '../app/views/templates/footerPublic.php' ?>
+    <?php require_once '../templates/footerPublic.php' ?>

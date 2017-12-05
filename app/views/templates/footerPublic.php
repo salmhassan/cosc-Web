@@ -7,8 +7,8 @@
 <?php 
 		require_once '../../controllers/crud.php';
 		$_index = new crud();
-		$result = $_index -> getLastLogin();
-		echo "Last Login: ".$result;
+		$result = $_index -> getTotalLongAttemptsToday();
+		echo "Total Login Attempts Today: ".$result;
 	?>
 			</p>
         </div>

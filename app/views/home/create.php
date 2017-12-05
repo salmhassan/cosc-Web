@@ -1,4 +1,4 @@
-<?php require_once '../app/views/templates/header.php' ?>
+<?php require_once '../templates/header.php' ?>
 <div class="container">
     <div class="page-header" id="banner">
         <div class="row">
@@ -13,7 +13,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <form class="form-horizontal" action="/crud/create" method="post">
+            <form class="form-horizontal" action="create.php" method="post">
 			    <fieldset>
 					<div class="form-group">
 					  <label for="username" class="col-lg-2 control-label">Subject</label>
@@ -38,4 +38,4 @@
         </div>
     </div>
 
-    <?php require_once '../app/views/templates/footer.php' ?>
+    <?php require_once '../templates/footer.php' ?>

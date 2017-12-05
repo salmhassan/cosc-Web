@@ -1,4 +1,7 @@
-<?php require_once '../app/views/templates/header.php' ?>
+<?php 
+require_once '../../init.php';
+require_once '../templates/header.php';
+?>
 
 <div class="container">
     <div class="page-header" id="banner">
@@ -17,10 +20,10 @@
     </div>
 	<?php 
 	
-    echo "<a href='/home/mylogs'>My Logs (Previous Attempts)</a>";
+    echo "<a href='mylogs.php'>My Logs (Previous Attempts)</a>";
 	echo "</br>";
-    echo "<a href='/home/create'>New Note</a>";
-	require_once '../app/controllers/crud.php';
+    echo "<a href='create.php'>New Note</a>";
+	require_once '../../controllers/crud.php';
 	$_index = new crud();
 	$result = $_index -> index();
 	echo "<table class='table'>";
@@ -54,4 +57,4 @@
     echo "</table>";
     ?>
 
-    <?php require_once '../app/views/templates/footer.php' ?>
+    <?php require_once '../templates/footer.php' ?>
